@@ -140,9 +140,9 @@
 
   .card-grid{
     display:grid;
-    grid-template-columns:repeat(auto-fill, minmax(260px, 1fr));
+    grid-template-columns:repeat(4, 1fr);
     gap:20px;
-    max-width:1100px;
+    max-width:1200px;
   }
   .portal-card{
     display:flex;
@@ -206,6 +206,10 @@
   @media (max-width:640px){
     .app-shell{ padding:32px 20px; }
     .home-header h1{ font-size:24px; }
+    .card-grid{ grid-template-columns:1fr; }
+  }
+  @media (min-width:641px) and (max-width:900px){
+    .card-grid{ grid-template-columns:repeat(2, 1fr); }
   }
 </style>
 </head>
@@ -235,6 +239,20 @@
   </div>
 
   <div class="card-grid">
+    <a class="portal-card" style="--card-accent:#54a4b3" href="https://apps.powerapps.com/play/e/default-5b149376-e794-49a0-a90d-7e8dab892910/a/5e2fa510-ec4b-4071-84fa-af554eebda46?tenantId=5b149376-e794-49a0-a90d-7e8dab892910&hint=33957417-782c-4091-ba83-469338e24930&sourcetime=1787529118490">
+      <div class="portal-icon">UA</div>
+      <div class="portal-name">U-Access</div>
+      <div class="portal-desc">Registro de acceso QR a Ubictum y Ubictum II para clientes, proveedores generales, candidatos, familiares, ex-colaboradores, colaboradores, transportistas y proveedores de recibo.</div>
+      <div class="portal-goto">Entrar</div>
+    </a>
+
+    <a class="portal-card" style="--card-accent:#636469" href="https://apps.powerapps.com/play/e/default-5b149376-e794-49a0-a90d-7e8dab892910/a/b327cc43-e02d-4d5c-9419-e1dd682078e3?tenantId=5b149376-e794-49a0-a90d-7e8dab892910&sourcetime=1787529167644">
+      <div class="portal-icon">S</div>
+      <div class="portal-name">U-Solicitudes</div>
+      <div class="portal-desc">Registro de solicitudes de servicio para el área de Mantenimiento y BT Ubictum.</div>
+      <div class="portal-goto">Entrar</div>
+    </a>
+
     <a class="portal-card" style="--card-accent:#ffc306" href="https://btubictum.github.io/alertas-operativas/">
       <div class="portal-icon">A</div>
       <div class="portal-name">Alertas Operativas</div>
@@ -242,17 +260,17 @@
       <div class="portal-goto">Entrar</div>
     </a>
 
-    <a class="portal-card" style="--card-accent:#3475a7" href="https://btubictum.github.io/headcount/">
-      <div class="portal-icon">P</div>
-      <div class="portal-name">Personal Activo</div>
-      <div class="portal-desc">Listado y consulta de colaboradores activos, con búsqueda por número de empleado o nombre.</div>
-      <div class="portal-goto">Entrar</div>
-    </a>
-
     <a class="portal-card" style="--card-accent:#006a7c" href="https://btubictum.github.io/info_biometricos/">
       <div class="portal-icon">B</div>
       <div class="portal-name">Biométricos Colaboradores</div>
-      <div class="portal-desc">Organiza y consulta los registros de entrada/salida capturados por los biométricos.</div>
+      <div class="portal-desc">Consulta los registros de entrada/salida capturados por los biométricos.</div>
+      <div class="portal-goto">Entrar</div>
+    </a>
+
+    <a class="portal-card" style="--card-accent:#3475a7" href="https://btubictum.github.io/headcount/">
+      <div class="portal-icon">P</div>
+      <div class="portal-name">Personal Activo</div>
+      <div class="portal-desc">Listado y consulta de personal activo Ubictum.</div>
       <div class="portal-goto">Entrar</div>
     </a>
 
